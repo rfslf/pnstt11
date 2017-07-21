@@ -1,0 +1,33 @@
+# nmap -sV -Pn -A 172.16.0.14 -p-
+
+Starting Nmap 7.40 ( https://nmap.org ) at 2017-07-20 16:47 MSK
+Stats: 0:04:25 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 90.25% done; ETC: 16:52 (0:00:29 remaining)
+Nmap scan report for 172.16.0.14
+Host is up (0.25s latency).
+Not shown: 65533 filtered ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 6.7p1 Debian 5+deb8u3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 50:f9:23:6f:7e:3f:bb:68:77:5e:44:99:4d:51:9b:92 (DSA)
+|   2048 df:da:b6:ac:c8:d6:ee:10:0b:b0:da:87:2f:c9:a3:08 (RSA)
+|_  256 e1:3e:b9:12:3e:01:ea:d5:d0:9a:3b:96:da:a8:ce:a5 (ECDSA)
+80/tcp open  http    nginx 1.6.2
+|_http-server-header: nginx/1.6.2
+|_http-title: 403 Forbidden
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|specialized|WAP|printer|webcam
+Running (JUST GUESSING): Linux 3.X|2.6.X (88%), Crestron 2-Series (88%), Asus embedded (86%), HP embedded (86%), AXIS embedded (85%)
+OS CPE: cpe:/o:linux:linux_kernel:3.2 cpe:/o:crestron:2_series cpe:/h:asus:rt-n56u cpe:/o:linux:linux_kernel:3.4 cpe:/o:linux:linux_kernel:2.6.17 cpe:/h:axis:210a_network_camera cpe:/h:axis:211_network_camera
+Aggressive OS guesses: Linux 3.2 (88%), Crestron XPanel control system (88%), ASUS RT-N56U WAP (Linux 3.4) (86%), Linux 3.1 (86%), Linux 3.16 (86%), HP PSC 2400-series Photosmart printer (86%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (85%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT       ADDRESS
+1   270.56 ms 10.255.0.1
+2   270.67 ms 172.16.0.14
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 316.35 seconds

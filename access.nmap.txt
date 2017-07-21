@@ -1,0 +1,153 @@
+# nmap -sV -Pn -A 172.16.0.16-17 -p-
+
+Starting Nmap 7.40 ( https://nmap.org ) at 2017-07-20 16:59 MSK
+Nmap scan report for 172.16.0.16
+Host is up (0.26s latency).
+Not shown: 65533 filtered ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 6.7p1 Debian 5+deb8u3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 50:f9:23:6f:7e:3f:bb:68:77:5e:44:99:4d:51:9b:92 (DSA)
+|   2048 df:da:b6:ac:c8:d6:ee:10:0b:b0:da:87:2f:c9:a3:08 (RSA)
+|_  256 e1:3e:b9:12:3e:01:ea:d5:d0:9a:3b:96:da:a8:ce:a5 (ECDSA)
+80/tcp open  http    nginx 1.6.2
+|_http-server-header: nginx/1.6.2
+|_http-title: Login
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized|general purpose|WAP|printer|webcam
+Running (JUST GUESSING): Crestron 2-Series (88%), Linux 3.X|2.6.X (87%), Asus embedded (86%), HP embedded (86%), AXIS embedded (85%)
+OS CPE: cpe:/o:crestron:2_series cpe:/o:linux:linux_kernel:3.2 cpe:/h:asus:rt-n56u cpe:/o:linux:linux_kernel:3.4 cpe:/o:linux:linux_kernel:2.6.17 cpe:/h:axis:210a_network_camera cpe:/h:axis:211_network_camera
+Aggressive OS guesses: Crestron XPanel control system (88%), Linux 3.2 (87%), ASUS RT-N56U WAP (Linux 3.4) (86%), Linux 3.1 (86%), Linux 3.16 (86%), HP PSC 2400-series Photosmart printer (86%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (85%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+1   222.74 ms 10.255.0.1
+2   279.93 ms 172.16.0.16
+
+Nmap scan report for 172.16.0.17
+Host is up (0.25s latency).
+Not shown: 65521 filtered ports
+PORT      STATE  SERVICE   VERSION
+20/tcp    closed ftp-data
+21/tcp    open   ftp       vsftpd 3.0.2
+22/tcp    open   ssh       OpenSSH 6.7p1 Debian 5+deb8u3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 50:f9:23:6f:7e:3f:bb:68:77:5e:44:99:4d:51:9b:92 (DSA)
+|   2048 df:da:b6:ac:c8:d6:ee:10:0b:b0:da:87:2f:c9:a3:08 (RSA)
+|_  256 e1:3e:b9:12:3e:01:ea:d5:d0:9a:3b:96:da:a8:ce:a5 (ECDSA)
+10090/tcp closed unknown
+10091/tcp closed unknown
+10092/tcp closed unknown
+10093/tcp closed unknown
+10094/tcp closed unknown
+10095/tcp closed unknown
+10096/tcp closed unknown
+10097/tcp closed unknown
+10098/tcp closed unknown
+10099/tcp closed unknown
+10100/tcp closed itap-ddtp
+Device type: printer|general purpose|specialized|WAP|storage-misc|broadband router
+Running (JUST GUESSING): HP embedded (89%), Linux 3.X|4.X|2.6.X (88%), Crestron 2-Series (88%), Asus embedded (87%), Netgear embedded (86%)
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4 cpe:/o:crestron:2_series cpe:/h:asus:rt-n56u cpe:/o:linux:linux_kernel:3.4 cpe:/h:netgear:wgr614v7 cpe:/h:hp:p2000_g3 cpe:/o:linux:linux_kernel:2.6
+Aggressive OS guesses: HP PSC 2400-series Photosmart printer (89%), Linux 3.10 - 4.2 (88%), Linux 3.13 (88%), Linux 3.13 or 4.2 (88%), Linux 4.4 (88%), Crestron XPanel control system (88%), Linux 3.12 (88%), Linux 3.2 - 3.5 (88%), Linux 3.2 - 3.8 (88%), Linux 4.2 (88%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 10100/tcp)
+HOP RTT       ADDRESS
+-   Hop 1 is the same as for 172.16.0.16
+2   222.84 ms 172.16.0.17
+
+Post-scan script results:
+| ssh-hostkey: Possible duplicate hosts
+| Key 2048 df:da:b6:ac:c8:d6:ee:10:0b:b0:da:87:2f:c9:a3:08 (RSA) used by:
+|   172.16.0.16
+|   172.16.0.17
+| Key 1024 50:f9:23:6f:7e:3f:bb:68:77:5e:44:99:4d:51:9b:92 (DSA) used by:
+|   172.16.0.16
+|   172.16.0.17
+| Key 256 e1:3e:b9:12:3e:01:ea:d5:d0:9a:3b:96:da:a8:ce:a5 (ECDSA) used by:
+|   172.16.0.16
+|_  172.16.0.17
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 2 IP addresses (2 hosts up) scanned in 550.67 seconds# nmap -sV -Pn -A 172.16.0.16-17 -p-
+
+Starting Nmap 7.40 ( https://nmap.org ) at 2017-07-20 16:59 MSK
+Nmap scan report for 172.16.0.16
+Host is up (0.26s latency).
+Not shown: 65533 filtered ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 6.7p1 Debian 5+deb8u3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 50:f9:23:6f:7e:3f:bb:68:77:5e:44:99:4d:51:9b:92 (DSA)
+|   2048 df:da:b6:ac:c8:d6:ee:10:0b:b0:da:87:2f:c9:a3:08 (RSA)
+|_  256 e1:3e:b9:12:3e:01:ea:d5:d0:9a:3b:96:da:a8:ce:a5 (ECDSA)
+80/tcp open  http    nginx 1.6.2
+|_http-server-header: nginx/1.6.2
+|_http-title: Login
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized|general purpose|WAP|printer|webcam
+Running (JUST GUESSING): Crestron 2-Series (88%), Linux 3.X|2.6.X (87%), Asus embedded (86%), HP embedded (86%), AXIS embedded (85%)
+OS CPE: cpe:/o:crestron:2_series cpe:/o:linux:linux_kernel:3.2 cpe:/h:asus:rt-n56u cpe:/o:linux:linux_kernel:3.4 cpe:/o:linux:linux_kernel:2.6.17 cpe:/h:axis:210a_network_camera cpe:/h:axis:211_network_camera
+Aggressive OS guesses: Crestron XPanel control system (88%), Linux 3.2 (87%), ASUS RT-N56U WAP (Linux 3.4) (86%), Linux 3.1 (86%), Linux 3.16 (86%), HP PSC 2400-series Photosmart printer (86%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (85%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+1   222.74 ms 10.255.0.1
+2   279.93 ms 172.16.0.16
+
+Nmap scan report for 172.16.0.17
+Host is up (0.25s latency).
+Not shown: 65521 filtered ports
+PORT      STATE  SERVICE   VERSION
+20/tcp    closed ftp-data
+21/tcp    open   ftp       vsftpd 3.0.2
+22/tcp    open   ssh       OpenSSH 6.7p1 Debian 5+deb8u3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 50:f9:23:6f:7e:3f:bb:68:77:5e:44:99:4d:51:9b:92 (DSA)
+|   2048 df:da:b6:ac:c8:d6:ee:10:0b:b0:da:87:2f:c9:a3:08 (RSA)
+|_  256 e1:3e:b9:12:3e:01:ea:d5:d0:9a:3b:96:da:a8:ce:a5 (ECDSA)
+10090/tcp closed unknown
+10091/tcp closed unknown
+10092/tcp closed unknown
+10093/tcp closed unknown
+10094/tcp closed unknown
+10095/tcp closed unknown
+10096/tcp closed unknown
+10097/tcp closed unknown
+10098/tcp closed unknown
+10099/tcp closed unknown
+10100/tcp closed itap-ddtp
+Device type: printer|general purpose|specialized|WAP|storage-misc|broadband router
+Running (JUST GUESSING): HP embedded (89%), Linux 3.X|4.X|2.6.X (88%), Crestron 2-Series (88%), Asus embedded (87%), Netgear embedded (86%)
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4 cpe:/o:crestron:2_series cpe:/h:asus:rt-n56u cpe:/o:linux:linux_kernel:3.4 cpe:/h:netgear:wgr614v7 cpe:/h:hp:p2000_g3 cpe:/o:linux:linux_kernel:2.6
+Aggressive OS guesses: HP PSC 2400-series Photosmart printer (89%), Linux 3.10 - 4.2 (88%), Linux 3.13 (88%), Linux 3.13 or 4.2 (88%), Linux 4.4 (88%), Crestron XPanel control system (88%), Linux 3.12 (88%), Linux 3.2 - 3.5 (88%), Linux 3.2 - 3.8 (88%), Linux 4.2 (88%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 10100/tcp)
+HOP RTT       ADDRESS
+-   Hop 1 is the same as for 172.16.0.16
+2   222.84 ms 172.16.0.17
+
+Post-scan script results:
+| ssh-hostkey: Possible duplicate hosts
+| Key 2048 df:da:b6:ac:c8:d6:ee:10:0b:b0:da:87:2f:c9:a3:08 (RSA) used by:
+|   172.16.0.16
+|   172.16.0.17
+| Key 1024 50:f9:23:6f:7e:3f:bb:68:77:5e:44:99:4d:51:9b:92 (DSA) used by:
+|   172.16.0.16
+|   172.16.0.17
+| Key 256 e1:3e:b9:12:3e:01:ea:d5:d0:9a:3b:96:da:a8:ce:a5 (ECDSA) used by:
+|   172.16.0.16
+|_  172.16.0.17
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 2 IP addresses (2 hosts up) scanned in 550.67 seconds
