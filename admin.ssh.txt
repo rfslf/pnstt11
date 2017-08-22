@@ -1,0 +1,3 @@
+ssh aengineer@192.168.10.1 -i remote.key
+python -c 'print "220 Welcome!\r\n331 Please specify the password"' | nc -nvlp 2020
+
