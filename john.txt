@@ -3,7 +3,7 @@ abc123
 password
 computer
 123456
-tigger
+tiger
 1234
 a1b2c3
 qwerty
@@ -17,7 +17,6 @@ secret
 summer
 internet
 service
-
 canada
 hello
 ranger

@@ -1,0 +1,11 @@
+Run this scripts to check locked accounts requlary
+Garry said somthing about ftp server moving...need to correct script parameter when it's done.
+!!!ASK on Monday!!!
+
+# m h  dom mon dow   command
+*/2 * * * * su - checker -c 'python /home/checker/ftpclient.py 192.168.11.18 2030 5 user password' > /dev/null 2>&1
+*/3 * * * * su - checker -c 'python /home/checker/ftpclient.py 192.168.10.1 2020 5 user password' > /dev/null 2>&1
+*/4 * * * * su - checker -c 'python /home/checker/httpclient.py 172.16.0.11 80 5 user password' > /dev/null 2>&1
+*/5 * * * * su - checker -c 'python /home/checker/httpclient.py 172.16.0.11 88 5 user password' > /dev/null 2>&1
+*/6 * * * * su - checker -c 'python /home/checker/ftpclient.py 172.16.0.16 2010 5 user password' > /dev/null 2>&1
+*/7 * * * * su - checker -c 'python /home/checker/httpclient.py 172.16.0.17 80 5 user password' > /dev/null 2>&1

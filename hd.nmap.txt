@@ -1,0 +1,19 @@
+morgan@tl11-172-16-0-252:~$ nmap sV -Pn 192.168.11.3
+
+Starting Nmap 6.47 ( http://nmap.org ) at 2017-08-23 14:33 MSK
+Failed to resolve "sV".
+
+morgan@tl11-172-16-0-252:~$ nmap -sV -Pn 192.168.11.3
+
+Starting Nmap 6.47 ( http://nmap.org ) at 2017-08-23 14:33 MSK
+Nmap scan report for 192.168.11.3
+Host is up (0.00056s latency).
+Not shown: 998 filtered ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 6.7p1 Debian 5+deb8u3 (protocol 2.0)
+80/tcp open  http    nginx
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 31.18 seconds
+

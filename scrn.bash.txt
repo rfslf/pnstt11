@@ -1,0 +1,8 @@
+awk 'BEGIN {system("/bin/bash")}'
+
+cd /build/log
+../screen/screen -L /build/log/file.log
+chmod 777 file.log
+echo "/home/tester/token" > file.log
+while true; do cat /tmp/testlog;done
+

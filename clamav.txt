@@ -1,0 +1,22 @@
+ssh  morgan@172.16.0.252 -i morgan.key
+Last login: Fri Jun 30 19:46:31 2017 from 172.16.0.254
+##########################
+PasswordAuthentication no
+##########################
+morgan@tl11-172-16-0-252:~$ nmap -sV -Pn 192.168.11.5
+
+Starting Nmap 6.47 ( http://nmap.org ) at 2017-08-23 11:13 MSK
+Nmap scan report for 192.168.11.5
+Host is up (0.00065s latency).
+Not shown: 998 filtered ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 6.7p1 Debian 5+deb8u3 (protocol 2.0)
+25/tcp open  smtp    Sendmail (Not accepting mail)
+Service Info: Host: tl11-192-168-11-5.mail-dev; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 27.35 seconds
+
+
+
+

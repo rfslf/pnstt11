@@ -1,0 +1,140 @@
+ftpclient.py
+#!//usr/bin/python
+
+from ftplib import FTP
+import sys
+ftp = FTP()
+ftp.connect('172.16.0.17','21',3)
+ftp.login('acontrol','IControlEverything')
+with open('/var/www/html/db.csv', 'w+b') as f:
+    res = ftp.retrbinary('RETR db.csv', f.write)
+    if not res.startswith('226 Transfer complete'):
+        print('Downloaded of file {0} is not compile.'.format(orig_filename))
+        os.remove(local_filename)
+ftp.quit()
+
+<?php
+
+if ($_GET["auth"] != asdfgtgrfedQWERsdfd) {
+header('Location: index.html');
+exit();
+}
+
+login.php
+<?php
+
+$usr="admin@11.lab";
+$pwd="admin";
+
+$username=$_POST['email'];
+$password=$_POST['password'];
+
+if (($username==$usr) && ($password==$pwd)) {
+ header('Location: parse.php?auth=asdfgtgrfedQWERsdfd');
+ }else{
+ header('Location: index.html');
+}
+
+?>
+
+
+index.html
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+      <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <body class="align">
+  <div class="grid">
+    <form action="login.php" method="post" class="form login">
+      <header class="login__header">
+        <h3 class="login__title">Access Control System</h3>
+      </header>
+      <div class="login__body">
+
+        <div class="form__field">
+          <input type="email" placeholder="Email" name="email" required>
+        </div>
+
+        <div class="form__field">
+          <input type="password" placeholder="Password" name="password" required>
+        </div>
+
+      </div>
+
+      <footer class="login__footer">
+        <input type="submit" value="Login">
+
+      </footer>
+
+    </form>
+
+  </div>
+
+</body>
+  
+  
+</body>
+</html>
+
+parse.php
+<?php
+
+if ($_GET["auth"] != asdfgtgrfedQWERsdfd) {
+header('Location: index.html');
+exit();
+}
+
+$row = 1;
+if (($handle = fopen("db.csv", "r")) !== FALSE) {
+    echo '<link rel="stylesheet" href="css/main.css" type="text/css">';
+    echo '<div id="wrapper" style="text-align: center">';
+    echo '<div id="yourdiv" style="display: inline-block;">';
+    echo '<table border="1">';
+    
+    while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
+        $num = count($data);
+        if ($row == 1) {
+            echo '<thead><tr>';
+        }else{
+            echo '<tr>';
+        }
+        
+        for ($c=0; $c < $num; $c++) {
+            //echo $data[$c] . "<br />\n";
+            if(empty($data[$c])) {
+               $value = "&nbsp;";
+            }else{
+               $value = $data[$c];
+            }
+            if ($row == 1) {
+                echo '<th>'.$value.'</th>';
+            }else{
+            if ($c==2 or $c==3) {
+            $converted = exec('date -d @'.$value);
+            echo '<td>'.$converted.'</td>';
+            }else{
+                echo '<td>'.$value.'</td>';
+            }
+            }
+        }
+        
+        if ($row == 1) {
+            echo '</tr></thead><tbody>';
+        }else{
+            echo '</tr>';
+        }
+        $row++;
+    }
+    
+    echo '</tbody></table>';
+    echo '</div>';
+    echo '</div>';
+    fclose($handle);
+}
+?>
+
